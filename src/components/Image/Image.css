@@ -1,0 +1,28 @@
+/* src/components/ImagesGallery.css */
+.images-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.thumbnail-images img {
+  width: 50px;
+  height: 50px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbnail-images img.selected {
+  border: 2px solid #333;
+}
