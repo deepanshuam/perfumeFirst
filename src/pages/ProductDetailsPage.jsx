@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/Footer"
+import server from "../components/constant/config";
 
 const ProductDetailsPage = (props) => {
   const [perfume, setPerfume] = useState([]);
@@ -17,7 +18,7 @@ const ProductDetailsPage = (props) => {
   useEffect(() => {
     const getPerfume = async () => {
       try {
-        const res = await axios.get("https://perfumesecond.onrender.com");
+        const res = await axios.get(`${server}/api/products`);
         // const data =res.data.filter((data)=>data.tag==="Free")
         const data = res.data;
         setPerfume(data);

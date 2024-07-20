@@ -7,6 +7,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import Navbar from '../components/navbar/navbar';
 import Footer from '../components/Footer';
+import server from '../components/constant/config';
+
 const ProductPage = () => {
 
   const[perfume,setPerfume]=useState([]);
@@ -14,7 +16,7 @@ const ProductPage = () => {
   useEffect(()=>{
     const getPerfume = async()=>{
     try {
-      const res = await axios.get("https://perfumesecond.onrender.com");
+      const res = await axios.get(`${server}/api/products`);
       console.log(res.data);
       setPerfume(res.data);
     } catch (error) {

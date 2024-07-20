@@ -7,6 +7,7 @@ import axios from "axios";
 
 
 import ProductCard from "./product/ProductCard";
+import server from "./constant/config";
 const HomeProduct = () => {
   const [perfume, setPerfume] = useState([]);
 
@@ -14,7 +15,7 @@ const HomeProduct = () => {
     const getPerfume = async () => {
       try {
         // const res = await axios.get("http://localhost:4000/api/products");
-         const res = await axios.get("https://perfumesecond.onrender.com");
+         const res = await axios.get(`${server}/api/products`);
         // const data =res.data.filter((data)=>data.tag==="Free")
         const data = res.data;
         setPerfume(data);
