@@ -13,7 +13,8 @@ const HomeProduct = () => {
   useEffect(() => {
     const getPerfume = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/products");
+        // const res = await axios.get("http://localhost:4000/api/products");
+         const res = await axios.get("https://perfumesecond.onrender.com");
         // const data =res.data.filter((data)=>data.tag==="Free")
         const data = res.data;
         setPerfume(data);

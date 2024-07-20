@@ -14,7 +14,7 @@ const ProductPage = () => {
   useEffect(()=>{
     const getPerfume = async()=>{
     try {
-      const res = await axios.get("http://localhost:4000/api/products");
+      const res = await axios.get("https://perfumesecond.onrender.com");
       console.log(res.data);
       setPerfume(res.data);
     } catch (error) {
