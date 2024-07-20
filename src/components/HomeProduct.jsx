@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
-import "./style.css";
+
 
 import ProductCard from "./product/ProductCard";
 const HomeProduct = () => {
